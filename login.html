@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/logon.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body class="login-page" style="background-image: url('images/login-bg.jpg');">
+<!-- Background image is dynamic: login-bg.jpg, login-bg-2.jpg,...  -->
+<header>
+    <div class="container">
+        <img src="images/logo.png" alt="TOPICA" class="logo">
+        <img src="images/logo-tvu.png" alt="TVU" class="logo-2">
+    </div>
+</header>
+<main>
+    <div class="container">
+        <form action="index.html" method="">
+            <img src="images/slogan-login.png">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required>
+            <input type="password" name="password" placeholder="Mật khẩu" required>
+            <input type="submit" name="login" value="ĐĂNG NHẬP">
+            <br>
+            <div class="checkbox checkbox-circle">
+                <input name="keep_login" id="keep_login" type="checkbox" value="1">
+                <label for="keep_login">Duy trì đăng nhập</label>
+            </div>
+            <a id="button-qmk" href="#" data-toggle="modal" data-target="#myModal">Quên mật khẩu?</a>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <img src="images/footer-login.png">
+    </div>
+</footer>
+<!-- MODAL -->
+<div aria-hidden="true" style="display: none;" id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content1-->
+        <div class="modal-content content1 hide">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×Đóng</button>
+                <h4 class="modal-title">Tên đăng nhập</h4>
+            </div>
+            <div class="modal-body">
+                <p class="quentdn">Anh/chị cần điền lại tên đăng nhập</p>
+                <span class="bar"></span>
+                <label style="position: absolute;"><span class="glyphicon glyphicon-user"></span></label>
+                <input id="tdn" name="tdn" required="" type="text">
+                <span class="saitdn"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="button-content1">Gửi</button>
+            </div>
+        </div>
+        <!-- Modal content2-->
+        <div class="modal-content content2 hide">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×Đóng</button>
+                <h4 class="modal-title">Mã xác nhận</h4>
+            </div>
+            <div class="modal-body">
+                <p class="thaymxn">Anh/chị điền mã xác nhận được gửi tới điện thoại để thay đổi mật khẩu</p>
+                <input id="maxacnhan" type="text"><span class="saimxn"></span>
+                <p class="content4-notice text-danger" style="margin-top: 20px;">Do phụ thuộc vào nhà mạng,tin nhắn có thể tới chậm sau một vài phút.<br></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="button-content2">Xác nhận</button>
+            </div>
+        </div>
+        <div class="modal-content content3 show">
+            <div class="modal-header">
+                <button type="button" class="close closecontent3" data-dismiss="modal">×Đóng</button>
+                <h4 class="modal-title">Số điện thoại</h4>
+            </div>
+            <div class="modal-body">
+                <p class="sdt">Anh/chị điền 4 số cuối của số di động để nhận mã xác nhận thay đổi mật khẩu.</p>
+                <p class="nhapsdt"></p><p class="sodienthoaimau">016xxxxxx35</p>
+                <input id="sodienthoai" name="" required="" type="text">
+                <input value="NzMzNQ==" id="checksodienthoai" type="hidden"> <span id="saidienthoai"></span>
+                <p class="content3-notice text-danger">
+                - Đây là số điện thoại đã đăng ký với quản lý học tập <br>
+                - Nếu Anh/chị không còn sử dụng số điện thoại này, vui lòng liên hệ với Quản lý học tập hoặc gọi hotline 1900 6481 để được hỗ trợ.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="button-content3">Gửi</button>
+            </div>
+        </div>
+        <div class="modal-content content4 hide">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×Đóng</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p class="quentmk">Anh/chị cần thực hiện thay đổi mật khẩu và đăng nhập lại đề vào được hệ thống</p>
+                <div style="margin-top:10px;">
+                    <label><span class="fa fa-key"></span>Mật khẩu mới</label>
+                    <input id="new_password" required="" type="password">
+                </div>
+                <div style="margin-bottom:5px;margin-top:20px;">
+                    <label><span class="fa fa-key"></span>Xác nhận mật khẩu mới</label>
+                    <input id="new_password_confirm" required="" type="password">
+                </div>
+                <p class="saimk"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="button-content4">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL -->
+</body>
+</html>
