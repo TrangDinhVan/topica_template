@@ -1,0 +1,15 @@
+header {
+  box-shadow: 0px 3px 6px -4px #444444;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+header img {
+  max-width: 190px;
+}
+header .logo-2 {
+  float: right;
+}
+footer {
+  background-color: #EEEEEE;
+}
